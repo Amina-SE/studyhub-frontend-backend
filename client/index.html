@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyHub | Academic Resource Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+   <!-- ================= NAVBAR ================= -->
+
+<header>
+    <nav class="navbar container">
+
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>StudyHub</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <a href="#" class="login-btn">Login</a>
+
+    </nav>
+</header>
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero fade-in">
+
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <h1>Empower Your Learning Journey</h1>
+
+            <p>
+                StudyHub is your all-in-one academic resource portal where
+                students can discover study notes, assignments, lecture
+                slides, and learning materials from one centralized platform.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#" class="primary-btn">Explore Resources</a>
+
+                <a href="#" class="secondary-btn">Get Started</a>
+
+            </div>
+
+        </div>
+
+       <div class="hero-image">
+
+    <img src="assets/images/study.svg" alt="Study Illustration">
+
+</div>
+
+    </div>
+
+</section>
+
+        <!-- ================= FEATURES ================= -->
+
+        <section class="features fade-in">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Why Choose StudyHub?</h2>
+
+            <p>
+                Everything a student needs to organize, access, and manage
+                academic resources in one place.
+            </p>
+
+        </div>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                <h3>Study Resources</h3>
+
+                <p>
+                    Access lecture notes, presentations, PDFs, and learning
+                    materials uploaded by students and instructors.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-list-check"></i>
+
+                <h3>Assignment Manager</h3>
+
+                <p>
+                    Keep track of assignments, due dates, submissions, and
+                    project work from a single dashboard.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <h3>Student Dashboard</h3>
+
+                <p>
+                    View your academic resources, monitor activity, and stay
+                    organized throughout the semester.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- ================= RESOURCES ================= -->
+
+        <section class="resources fade-in">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <section class="add-resource-section">
+
+    <h2>Add New Resource</h2>
+
+    <form id="resourceForm">
+
+        <input
+            type="text"
+            id="title"
+            placeholder="Resource Title"
+            required>
+
+        <textarea
+            id="description"
+            placeholder="Resource Description"
+            required></textarea>
+
+        <input
+            type="text"
+            id="category"
+            placeholder="Category"
+            required>
+
+        <button type="submit">
+            Add Resource
+        </button>
+
+    </form>
+
+</section>
+
+            <h2>Popular Study Resources</h2>
+
+            <div class="resource-controls">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search resources...">
+
+    <select id="categoryFilter">
+
+        <option value="All">All Categories</option>
+
+    </select>
+
+</div>
+
+            <p>
+                Browse some of the most accessed learning materials available on StudyHub.
+            </p>
+
+        </div>
+
+        <div class="resource-grid" id="resourceContainer"></div>
+
+    </div>
+
+</section>
+
+        <!-- ================= DASHBOARD ================= -->
+
+       <section class="dashboard fade-in">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Dashboard Preview</h2>
+
+            <p>
+                A quick overview of how students can manage academic resources from one place.
+            </p>
+
+        </div>
+
+        <div class="dashboard-box">
+
+            <div class="dashboard-header">
+
+                <h3>Student Dashboard</h3>
+
+                <span class="status">Online</span>
+
+            </div>
+
+            <div class="dashboard-cards">
+
+                <div class="dash-card">
+
+                    <i class="fa-solid fa-book"></i>
+
+                    <h2>128</h2>
+
+                    <p>Resources</p>
+
+                </div>
+
+                <div class="dash-card">
+
+                    <i class="fa-solid fa-user-graduate"></i>
+
+                    <h2>540</h2>
+
+                    <p>Students</p>
+
+                </div>
+
+                <div class="dash-card">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    <h2>76</h2>
+
+                    <p>Assignments</p>
+
+                </div>
+
+                <div class="dash-card">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    <h2>2340</h2>
+
+                    <p>Downloads</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- ================= STATS ================= -->
+
+       <section class="stats fade-in">
+
+    <div class="container">
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+    <h2 id="totalResources">0</h2>
+    <p>Total Resources</p>
+</div>
+
+<div class="stat-card">
+    <h2 id="totalCategories">0</h2>
+    <p>Categories</p>
+</div>
+
+<div class="stat-card">
+    <h2 id="databaseStatus">Online</h2>
+    <p>Database</p>
+</div>
+
+<div class="stat-card">
+    <h2>24/7</h2>
+    <p>Availability</p>
+</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="testimonials fade-in">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>What Students Say</h2>
+
+            <p>
+                Thousands of students trust StudyHub for managing their academic resources.
+            </p>
+
+        </div>
+
+        <div class="testimonial-grid">
+
+            <div class="testimonial-card">
+
+               <div class="stars">
+
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+
+               </div>
+
+                <p>
+                    "StudyHub has completely changed the way I organize my study materials. Everything is available in one place."
+                </p>
+
+                <h4>Amina Batool</h4>
+
+                <span>Software Engineering Student</span>
+
+            </div>
+
+            <div class="testimonial-card">
+
+                <div class="stars">
+
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+
+</div>
+
+                <p>
+                    "The dashboard makes tracking assignments incredibly simple. I never miss deadlines anymore."
+                </p>
+
+                <h4>Ali Khan</h4>
+
+                <span>Computer Science Student</span>
+
+            </div>
+
+            <div class="testimonial-card">
+
+                <div class="stars">
+
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+
+</div>
+
+                <p>
+                    "An excellent platform for sharing notes and accessing learning resources anytime."
+                </p>
+
+                <h4>Fatima Ahmed</h4>
+
+                <span>Information Technology Student</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta fade-in">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <h2>Ready to Transform Your Learning Experience?</h2>
+
+            <p>
+                Join StudyHub today and access academic resources, assignments, and study materials from one centralized platform.
+            </p>
+
+            <a href="#" class="cta-btn">
+                Get Started Today
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+   <footer>
+
+    <div class="container footer-content">
+
+        <div class="footer-about">
+
+            <h2>StudyHub</h2>
+
+            <p>
+                A modern academic resource portal designed to simplify learning and help students succeed.
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <a href="#">Home</a>
+            <a href="#">Resources</a>
+            <a href="#">Features</a>
+            <a href="#">Contact</a>
+
+        </div>
+
+        <div class="footer-contact">
+
+            <h3>Contact</h3>
+
+            <p>Email: info@studyhub.com</p>
+            <p>Phone: +92 300 1234567</p>
+            <p>Pakistan</p>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        © 2026 StudyHub. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+    <script src="script.js"></script>
+    <script src="js/api.js"></script>
+
+</body>
+
+</html>
