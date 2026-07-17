@@ -15,6 +15,8 @@ let editingId = null;
 
 async function loadResources() {
 
+    resourceContainer.innerHTML = "<h3>Loading Resources...</h3>";
+
     try {
 
         const response = await fetch("http://localhost:5000/resources");
@@ -39,11 +41,14 @@ document.getElementById("databaseStatus").textContent =
 
     }
 
-    catch (error) {
+    catch(error){
 
-        console.log(error);
+    console.log(error);
 
-    }
+    resourceContainer.innerHTML =
+    "<h3>Unable to connect to backend.</h3>";
+
+}
 
 }
 
@@ -132,8 +137,6 @@ searchInput.addEventListener("input", filterResources);
 
 categoryFilter.addEventListener("change", filterResources);
 
-// ---------------- ADD RESOURCE ----------------
-
 resourceForm.addEventListener("submit", async function (e) {
 
     e.preventDefault();
@@ -166,6 +169,8 @@ resourceForm.addEventListener("submit", async function (e) {
 
         });
 
+        alert("✅ Resource Added Successfully!");
+
     } else {
 
         // UPDATE RESOURCE
@@ -188,6 +193,8 @@ resourceForm.addEventListener("submit", async function (e) {
 
         document.querySelector("#resourceForm button").textContent = "Add Resource";
 
+        alert("✏️ Resource Updated Successfully!");
+
     }
 
     resourceForm.reset();
@@ -196,23 +203,40 @@ resourceForm.addEventListener("submit", async function (e) {
 
 });
 
-// ---------------- PLACEHOLDERS ----------------
+async function deleteResource(id){
+
+    if(confirm("Are you sure you want to delete this resource?")){
+
+        await fetch(`http://localhost:5000/resources/${id}`,{
+
+            method:"DELETE"
+
+        });
+
+        loadResources();
+
+        alert("🗑️ Resource Deleted Successfully!");
+
+    }
+
+}
 
 function editResource(id){
 
     const resource = allResources.find(r => r.id === id);
 
-    if(!resource) return;
+    if(!resource){
+        return;
+    }
 
     title.value = resource.title;
-
     description.value = resource.description;
-
     category.value = resource.category;
 
     editingId = id;
 
-    document.querySelector("#resourceForm button").textContent = "Update Resource";
+    document.querySelector("#resourceForm button").textContent =
+    "Update Resource";
 
     window.scrollTo({
 
@@ -224,34 +248,26 @@ function editResource(id){
 
 }
 
-async function deleteResource(id){
+loadResources();
 
-    const confirmDelete = confirm(
-        "Are you sure you want to delete this resource?"
-    );
-
-    if(!confirmDelete){
-        return;
-    }
+async function checkAPI(){
 
     try{
 
-        await fetch(
-            `http://localhost:5000/resources/${id}`,
-            {
-                method:"DELETE"
-            }
-        );
+        await fetch("http://localhost:5000/resources");
 
-        loadResources();
+        document.getElementById("apiStatus").textContent =
+        "🟢 Connected";
 
     }
-    catch(error){
 
-        console.log(error);
+    catch{
+
+        document.getElementById("apiStatus").textContent =
+        "🔴 Offline";
 
     }
 
 }
 
-loadResources();
+checkAPI();

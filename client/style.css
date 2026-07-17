@@ -1150,3 +1150,19 @@ transform:translateY(0);
 button{
     transition:.3s;
 }
+
+.api-status{
+
+    text-align:center;
+    padding:12px;
+    font-weight:600;
+    background:#eef5ff;
+    color:#333;
+
+}
+
+#apiStatus{
+
+    color:#2563eb;
+
+}
