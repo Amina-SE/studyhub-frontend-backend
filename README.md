@@ -207,7 +207,7 @@ GitHub:
 https://github.com/Amina-SE
 
 LinkedIn:
-www.linkedin.com/in/amina-bytes
+linkedin.com/in/amina-bytes 
 
 ---
 
