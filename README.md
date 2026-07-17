@@ -203,11 +203,10 @@ Software Engineering Student
 
 Riphah International University
 
-GitHub:
-https://github.com/Amina-SE
+## Connect with Me
 
-LinkedIn:
-linkedin.com/in/amina-bytes 
+- **GitHub:** https://github.com/Amina-SE
+- **LinkedIn:** [Amina Batool](https://www.linkedin.com/in/amina-bytes/)
 
 ---
 
