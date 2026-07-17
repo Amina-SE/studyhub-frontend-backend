@@ -1,8 +1,8 @@
-# 📚 StudyHub - Full Stack Study Resource Management System
+# StudyHub Frontend & Backend Integration
 
-StudyHub is a full-stack web application developed to help students organize and manage study resources efficiently. It provides a modern, responsive interface with complete CRUD (Create, Read, Update, Delete) functionality connected to a MySQL database through a Node.js and Express.js backend.
+A full-stack web application demonstrating seamless integration between a responsive frontend, RESTful backend APIs, and a MySQL database.
 
-This project was developed as part of my Full Stack Web Development Internship (Task 3).
+This project was developed as part of my Full Stack Web Development Internship (Task 4).
 
 ---
 
